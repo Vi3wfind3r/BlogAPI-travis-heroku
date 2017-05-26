@@ -54,11 +54,12 @@ describe('Blog Post', function() {
       author: 'Casey'
     };
     return chai.request(app)
-      .get('/blog-post')
+      .get('/blog-posts')
       .then(function(res) {
         updateData.id = res.body[0].id;
+        console.log(updateData.id);
         return chai.request(app)
-          .put(`/blog-post/${updateData.id}`)
+          .put(`/blog-posts/${updateData.id}`)
           .send(updateData);
       })
       .then(function(res) {
@@ -71,10 +72,10 @@ describe('Blog Post', function() {
 
   it('should delete blog post on DELETE', function() {
     return chai.request(app)
-      .get('/blog-post')
+      .get('/blog-posts')
       .then(function(res) {
         return chai.request(app)
-          .delete(`/blog-post/${res.body[0].id}`);
+          .delete(`/blog-posts/${res.body[0].id}`);
       })
       .then(function(res) {
         res.should.have.status(204);

@@ -11,6 +11,12 @@ const {BlogPosts} = require('./models');
 
 const jsonParser = bodyParser.json();
 
+
+BlogPosts.create('Raining today', 'Today it is raining; I just saw a water spout. Yikes!' , 'Chris');
+BlogPosts.create('Sunny today', '95 degrees and sunny here', 'Kyle R');
+BlogPosts.create('Expecting rain', 'Maybe that rain from FL will hit here. Not sure yet.', 'William');
+
+
 router.use((req,res,next) => {
   console.log('blog post', new Date(), req.method, req.url);
   next();
@@ -64,7 +70,7 @@ router.put('/:id', jsonParser, (req, res) => {
     content: req.body.content,
     author: req.body.author
   });
-  res.status(204).json(updatedItem);
+  res.status(200).json(updatedItem);
 });
 
 
