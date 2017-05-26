@@ -4,6 +4,6 @@ deploy:
   provider: heroku
   api_key:
     secure: bsPAFoP49Hfq6MXmjC+imbrby+HNiUzFwdSiEq5QCLk+PhnVZSM1YKcEFLfl15MvaRUIMg4sVJY+ELRk/0FCqPtbdBUHeyIttCxEQaNf8/x6sNFeK69MU+/WMzOf+xcwPG47d1b781kk5mpPZOdu0EYTqTN6H49nRvIiOcmyOgZty5fLn13UAxQvSFNNMLOrf1ON1fnjXfRf2TrSulbTxwP9jV5zpR/DqDYOdqxEpScB7vbe4W2bYY54YwJswCnLetgJPu7dfD6ZHflNXymkK70CE1YMB/tIHmnUO+9ivgYtJl3bmp9v9Hvnm+M3YKY8czX/0DMIjWDSW1lwr5HLfhbLh3XeMQKGsMt3h0x58hYhyD70ygvvYrkeKcEvKKpxxD+FVe+i1y8O9t/LnUz72MIB7U3we4Ax9iLKr4w5onKH4XXktpxO+hZ+pTpzv0WpsIulzCOMvsaLEYKDBpdIF73EmZ/YTWsYpdjZayOh6NrMtZcRGUXHwAs3j3lSn7p3jk/8IJ4hYlzRWG4PS9ZC/IQnCkq9DhP22jSRZ5m+x06+5kB5uUrXrxNroJH9dgNT7ZMqyNf1sD2QD1cvRk+WIQ6KhpxFm68NiQkjzuB0Ml4+17SBMAmP0dakuw2ahxGaRL284CxktYrgLJ/XCAYOKD6B52F/ozQW3Ad+AK7pA48=
-  app: BlogAPI-travis-heroku
+  app: arcane-sands-31190
   on:
     repo: Vi3wfind3r/BlogAPI-travis-heroku
