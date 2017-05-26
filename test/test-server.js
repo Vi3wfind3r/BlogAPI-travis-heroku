@@ -57,7 +57,6 @@ describe('Blog Post', function() {
       .get('/blog-posts')
       .then(function(res) {
         updateData.id = res.body[0].id;
-        console.log(updateData.id);
         return chai.request(app)
           .put(`/blog-posts/${updateData.id}`)
           .send(updateData);
@@ -66,7 +65,9 @@ describe('Blog Post', function() {
         res.should.have.status(200);
         res.should.be.json;
         res.body.should.be.a('object');
-        res.body.should.deep.equal(updateData);
+        res.body.title.should.equal(updateData.title);
+        res.body.content.should.equal(updateData.content);
+        res.body.author.should.equal(updateData.author);
       });
   });
 
