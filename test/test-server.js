@@ -18,7 +18,19 @@ describe('Blog Post', function() {
   });
 
   it('should list blog post on GET', function() {
-
+    return chai.request(app)
+      .get('/blog-posts')
+      .then(function(res) {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('array');
+        res.body.length.should.be.at.least(1);
+        const expectedKeys = ['id', 'title', 'content', 'author'];
+        res.body.forEach(function(item) {
+          item.should.be.a('object');
+          item.should.include.keys(expectedKeys);
+        });
+      });
   });
 
   it('should add a blog post on POST', function() {
