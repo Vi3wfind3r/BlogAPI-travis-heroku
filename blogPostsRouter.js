@@ -11,6 +11,10 @@ const {BlogPosts} = require('./models');
 
 const jsonParser = bodyParser.json();
 
+BlogPosts.create(
+  'Fun with Heroku', 'We have had a lot of fun with Travis and Heroku in Windows today!', 'Jamie and Tanner'
+);
+
 router.use((req,res,next) => {
   console.log('blog post', new Date(), req.method, req.url);
   next();
