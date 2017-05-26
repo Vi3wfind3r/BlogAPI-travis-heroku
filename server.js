@@ -20,7 +20,6 @@ BlogPosts.create('Sunny today', '95 degrees and sunny here', 'Kyle R');
 BlogPosts.create('Expecting rain', 'Maybe that rain from FL will hit here. Not sure yet.', 'William');
 
 
-
 // when requests come into `/blog-posts` or
 // we'll route them to the express
 // router instances we've imported. Remember,
